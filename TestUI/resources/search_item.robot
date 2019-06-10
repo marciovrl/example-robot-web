@@ -1,24 +1,17 @@
 *** Settings ***
 Library     SeleniumLibrary
+Library     ../pages/HomePage.py 
+
+Variables       ../helpers/data.py
 
 *** Variables ***
-${BROWSER}      chrome
-${URL}          https://mercadolivre.com.br
 
 *** Keywords ***
-
-Abrir navegador
-    Open Browser        about:blank      ${BROWSER} 
-
-Fechar navegador
-    Close Browser
-
 Given that it is on the homepage of Mercado Livre
-    Go to       ${URL}
+    Go to   ${url_base}
 
 When I search for "${ITEM}"
-    Input Text      name=as_word   ${ITEM}
-    Click Element       class=nav-search-btn
+    Search Item     ${ITEM}
 
 Then I view items according to my search
-    Page Should Contain Element     id=results-section
+    Page Should Contain Element     xpath=//h1[@class="breadcrumb__title"][text()="${item}"]
