@@ -1,8 +1,9 @@
 *** Settings ***
-Resource            ../resources/search_item.robot
+Resource    ../helpers/hooks.robot
+Resource    ../resources/search_item.robot
 
-Test Setup          Abrir navegador
-Test Teardown       Fechar navegador
+Test Setup  Abrir navegador
+Test Teardown   Fechar navegador
 
 *** Test Case ***
 

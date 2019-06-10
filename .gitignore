@@ -206,4 +206,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Robot evidencies
+./TestUI/results
+
 # End of https://www.gitignore.io/api/linux,macos,python,windows,visualstudiocode
