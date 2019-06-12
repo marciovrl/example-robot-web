@@ -1,6 +1,6 @@
-from PageObjectLibrary import PageObject
+from TestUI.helpers.BasePage import BasePage
 
-class HomePage(PageObject):
+class HomePage(BasePage):
 
     _locators = {
         "input_search_item": "name:as_word",
@@ -8,6 +8,5 @@ class HomePage(PageObject):
     }
 
     def search_item(self, text):
-        self.selib.wait_until_element_is_visible(self.locator.input_search_item, 10)
-        self.selib.input_text(self.locator.input_search_item, text)
-        self.selib.click_element(self.locator.button_search_item)
+        self.input_text(self.locator.input_search_item, text)
+        self.click(self.locator.button_search_item)
