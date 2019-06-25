@@ -2,8 +2,8 @@
 Resource    ../helpers/hooks.robot
 Resource    ../resources/search_item.robot
 
-Test Setup  Abrir navegador
-Test Teardown   Fechar navegador
+Test Setup  Open Browser
+Test Teardown   Kill Browser
 
 *** Test Case ***
 
