@@ -10,4 +10,4 @@ class HomePage(PageObject):
     def search_item(self, text):
         self.selib.wait_until_element_is_visible(self.locator.input_search_item, 10)
         self.selib.input_text(self.locator.input_search_item, text)
-        self.selib.click_element(self.locator.button_search_item)
+        self.selib.click_element(self.locator.button_search_item) 

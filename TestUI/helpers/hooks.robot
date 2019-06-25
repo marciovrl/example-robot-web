@@ -4,8 +4,11 @@ Library     SeleniumLibrary
 *** Variables ***
 
 *** Keywords ***
-Abrir navegador
-    Open Browser        about:blank      ${BROWSER} 
+Open Browser
+    ${options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+    Call Method    ${options}    add_argument    headless
+    Call Method    ${options}    add_argument    disable-gpu
+    Create WebDriver  ${BROWSER}   chrome_options=${options}
 
-Fechar navegador
+Kill Browser
     Close Browser

@@ -42,3 +42,8 @@ robot -v BROWSER:firefox -d ./TestUI/results TestUI/features/search_item.robot
 | - requirements.txt
 | - README.md
 ```
+
+# Execute
+```
+export PYTHONPATH=$PYTHONPATH:TestUI/helpers/
+```
