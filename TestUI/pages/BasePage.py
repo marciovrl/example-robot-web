@@ -1,5 +1,6 @@
 from PageObjectLibrary import PageObject
 
+
 class BasePage(PageObject):
 
     def wait_element(self, locator):
