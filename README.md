@@ -25,7 +25,7 @@ pip install -r requirements.txt
 - Run test in Chrome:
 
 ```
-robot -v BROWSER:chrome -d ./TestUI/results TestUI/features/search_item.robot
+robot -v BROWSER:chrome -d ./test/results TestUI/features/search_item.robot
 ```
 
 or
@@ -33,25 +33,11 @@ or
 - Run test in Firefox:
 
 ```
-robot -v BROWSER:firefox -d ./TestUI/results TestUI/features/search_item.robot
+robot -v BROWSER:firefox -d ./test/results TestUI/features/search_item.robot
 ```
 
-# Structure of the project
+# Obs
 
 ```
-|
-| - TestUI
-    | - features
-    | - helper
-    | - pages
-    | - resources
-| - .gitignore
-| - requirements.txt
-| - README.md
-```
-
-# Execute
-
-```
-export PYTHONPATH=$PYTHONPATH:TestUI/helpers/
+export PYTHONPATH=$PYTHONPATH:test/helpers/
 ```
