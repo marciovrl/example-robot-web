@@ -207,6 +207,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # Robot evidencies
-./TestUI/results
+./test/results
 
 # End of https://www.gitignore.io/api/linux,macos,python,windows,visualstudiocode
